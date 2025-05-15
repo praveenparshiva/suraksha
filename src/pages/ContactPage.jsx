@@ -36,7 +36,7 @@ const ContactPage = () => {
                   <div className="method-details">
                     <h3>Phone</h3>
                     <p>
-                      <a href="tel:+919743409275">+91 9743 409 275</a>
+                      <a href="tel:+919713409275">+91 9713 409 275</a>
                     </p>
                   </div>
                 </div>
