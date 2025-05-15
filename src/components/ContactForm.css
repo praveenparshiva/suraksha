@@ -3,24 +3,30 @@
   border-radius: var(--border-radius);
   padding: 40px;
   box-shadow: var(--box-shadow);
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  width: 100%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .form-group label {
@@ -37,6 +43,8 @@
   font-family: inherit;
   font-size: 1rem;
   transition: var(--transition);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -71,9 +79,9 @@
 
 @media (max-width: 768px) {
   .contact-form-container {
-    padding: 25px;
+    padding: 20px;
   }
-  
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 15px;
