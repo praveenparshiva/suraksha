@@ -21,8 +21,8 @@ const Header = () => {
         </div>
 
         <div className="contact-info">
-          <a href="tel:+919876543210" className="phone-link">
-            <FaPhone /> +91 9141033290
+          <a href="tel:+919713409275" className="phone-link">
+            <FaPhone /> +91 9713409275
           </a>
         </div>
 
