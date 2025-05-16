@@ -224,7 +224,8 @@ const ServicesPage = () => {
             </p>
 
             <div className="pricing-table">
-              <div className="pricing-category">
+              <div className="pricing-category featured">
+                <div className="featured-label">Most Popular</div>
                 <h3>Residential Services</h3>
                 <div className="price-range">
                   <span>Starting from</span>
@@ -240,8 +241,7 @@ const ServicesPage = () => {
                 </Link>
               </div>
 
-              <div className="pricing-category featured">
-                <div className="featured-label">Most Popular</div>
+              <div className="pricing-category ">
                 <h3>Commercial Services</h3>
                 <div className="price-range">
                   <span>Starting from</span>
@@ -276,7 +276,7 @@ const ServicesPage = () => {
               </div>
             </div>
 
-            <div className="pricing-note">
+            <div className="pricing-note featured">
               <p>
                 <strong>Note:</strong> The above prices are indicative and may
                 vary based on the specific requirements of your project. Contact
