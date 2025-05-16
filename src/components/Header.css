@@ -84,9 +84,12 @@
 
   .contact-info {
     order: 3;
-    margin-top: 10px;
+    margin-top: 15px;
     width: 100%;
     justify-content: center;
+  }
+  .contact-info * {
+    color: rgb(0, 0, 0) !important;
   }
 
   .menu-toggle {
@@ -128,7 +131,5 @@
     display: block;
     padding: 10px;
   }
-  .phone-link {
-    visibility: hidden;
-  }
+  
 }

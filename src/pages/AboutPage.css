@@ -32,7 +32,6 @@
 .story-image img {
   width: 70%;
   height: auto;
-  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
 }
 
@@ -130,7 +129,6 @@
 .value-item p {
   color: #555;
 }
-
 
 /* Stats Section */
 .stats-section {
