@@ -39,19 +39,7 @@ const ServicesPage = () => {
         "Quality check before refilling",
       ],
     },
-    {
-      icon: <FaShieldAlt />,
-      title: "Disinfection Services",
-      description:
-        "We provide specialized disinfection services for water storage systems using eco-friendly chemicals that eliminate harmful microorganisms without leaving harmful residues.",
-      features: [
-        "Use of certified disinfectants",
-        "Complete elimination of bacteria and viruses",
-        "Safe for drinking water systems",
-        "No harmful chemical residues",
-        "Prevents regrowth of microorganisms",
-      ],
-    },
+   
     {
       icon: <FaBuilding />,
       title: "Commercial Tank Cleaning",
@@ -180,15 +168,6 @@ const ServicesPage = () => {
 
             <div className="process-step">
               <div className="step-number">4</div>
-              <h3>Disinfection</h3>
-              <p>
-                We apply eco-friendly disinfectants to eliminate bacteria,
-                viruses, and other microorganisms that may be present.
-              </p>
-            </div>
-
-            <div className="process-step">
-              <div className="step-number">5</div>
               <h3>Rinsing</h3>
               <p>
                 The tank is thoroughly rinsed to remove any residual cleaning
@@ -197,7 +176,7 @@ const ServicesPage = () => {
             </div>
 
             <div className="process-step">
-              <div className="step-number">6</div>
+              <div className="step-number">5</div>
               <h3>Final Inspection</h3>
               <p>
                 We conduct a final inspection to ensure that the cleaning meets
@@ -208,84 +187,7 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="section pricing-section">
-        <div className="container">
-          <h2 className="section-title">Our Pricing</h2>
-          <p className="section-subtitle">
-            We offer competitive and transparent pricing for all our services
-          </p>
-
-          <div className="pricing-info">
-            <p>
-              Our pricing is based on the size and type of your water storage
-              system, as well as the level of cleaning required. We provide
-              customized quotes after assessing your specific needs.
-            </p>
-
-            <div className="pricing-table">
-              <div className="pricing-category featured">
-                <div className="featured-label">Most Popular</div>
-                <h3>Residential Services</h3>
-                <div className="price-range">
-                  <span>Starting from</span>
-                  <h4>₹1,500</h4>
-                </div>
-                <ul>
-                  <li>Overhead tanks up to 1000L</li>
-                  <li>Underground sumps up to 5000L</li>
-                  <li>Basic disinfection service</li>
-                </ul>
-                <Link to="/contact" className="btn">
-                  Get Quote
-                </Link>
-              </div>
-
-              <div className="pricing-category ">
-                <h3>Commercial Services</h3>
-                <div className="price-range">
-                  <span>Starting from</span>
-                  <h4>₹3,500</h4>
-                </div>
-                <ul>
-                  <li>Tanks up to 5000L</li>
-                  <li>Sumps up to 10000L</li>
-                  <li>Advanced cleaning & disinfection</li>
-                  <li>Maintenance contracts available</li>
-                </ul>
-                <Link to="/contact" className="btn">
-                  Get Quote
-                </Link>
-              </div>
-
-              <div className="pricing-category">
-                <h3>Industrial Services</h3>
-                <div className="price-range">
-                  <span>Starting from</span>
-                  <h4>₹8,000</h4>
-                </div>
-                <ul>
-                  <li>Large capacity tanks</li>
-                  <li>Industrial-grade cleaning</li>
-                  <li>Compliance certification</li>
-                  <li>24/7 emergency services</li>
-                </ul>
-                <Link to="/contact" className="btn">
-                  Get Quote
-                </Link>
-              </div>
-            </div>
-
-            <div className="pricing-note featured">
-              <p>
-                <strong>Note:</strong> The above prices are indicative and may
-                vary based on the specific requirements of your project. Contact
-                us for a detailed quote.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* FAQ Section */}
       <section className="section faq-section">

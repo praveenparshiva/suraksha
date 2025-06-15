@@ -48,8 +48,8 @@ const ContactPage = () => {
                   <div className="method-details">
                     <h3>Email</h3>
                     <p>
-                      <a href="mailto:santhosh57murthy@gmail.com">
-                        santhosh57murthy@gmail.com
+                      <a href="mailto:surakshatankmysore@gmail.com">
+                        surakshatankmysore@gmail.com
                       </a>
                     </p>
                   </div>
@@ -72,8 +72,8 @@ const ContactPage = () => {
                   </div>
                   <div className="method-details">
                     <h3>Business Hours</h3>
-                    <p>Monday - Saturday: 8:00 AM - 8:00 PM</p>
-                    <p>Sunday: 9:00 AM - 5:00 PM</p>
+                    <p>Monday - Saturday: 6:00 AM - 6:00 PM</p>
+                    <p>Sunday: 6:00 AM - 6:00 PM</p>
                   </div>
                 </div>
               </div>

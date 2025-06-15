@@ -32,7 +32,7 @@
 .story-image img {
   width: 70%;
   height: auto;
-  box-shadow: var(--box-shadow);
+  filter: drop-shadow(10px 10px 10px #000);
 }
 
 .story-text h2 {
