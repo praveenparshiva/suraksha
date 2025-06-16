@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaWater, FaTools, FaShieldAlt, FaCheckCircle } from "react-icons/fa";
 import Hero from "../components/Hero";
 import ServiceCard from "../components/ServiceCard";
-import TestimonialCard from "../components/TestimonialCard";
 import "./HomePage.css";
 
 const HomePage = () => {
@@ -28,26 +27,7 @@ const HomePage = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Almas Tabassum",
-      location: "Mysuru",
-      rating: 5,
-      text: "I recently had my sump and overhead tank cleaned by them and was very impressed. The team arrived on time, worked efficiently, and paid great attention to detail. Their commitment to customer satisfaction and quality service really stood out. I recommend them anytime for a thorough and professional work.",
-    },
-    {
-      name: "Srinivas L",
-      location: "Mysore",
-      rating: 5,
-      text: "Excellent work executed by the team. We have called only for sump cleaning & we came to know that they wl do deep cleaning work in the terrace. They have executed the work professional manner. Thank u for the team.",
-    },
-    {
-      name: "Pramod H N",
-      location: "Mysuru",
-      rating: 5,
-      text: "The sump and overhead tank cleaning services were carried out professionally and efficiently. Santhosh is a very humble person, and the two workers, Pandu and Kumar, did a great job with their hard work and dedication. Overall, the service was genuine and satisfactory.",
-    },
-  ];
+ 
 
   return (
     <div className="home-page">
@@ -179,22 +159,13 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="section testimonials-section">
+      {/* Elfsight Google Reviews Widget */}
+      <section className="section google-reviews-section">
         <div className="container">
-          <h2 className="section-title">What Our Customers Say</h2>
-
-          <div className="testimonials-grid">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                name={testimonial.name}
-                location={testimonial.location}
-                rating={testimonial.rating}
-                text={testimonial.text}
-              />
-            ))}
-          </div>
+          <div
+            className="elfsight-app-d1fb7013-7ccf-4263-b788-7d93f5a1e787"
+            data-elfsight-app-lazy
+          ></div>
         </div>
       </section>
 
