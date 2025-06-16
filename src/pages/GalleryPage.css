@@ -78,3 +78,17 @@ video {
   grid-column-start: 3;
   grid-row-start: 7;
 }
+@media (max-width: 600px) {
+  .parent {
+    grid-template-columns: 1fr;
+  }
+
+  .parent > div {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+  }
+
+  img, video {
+    height: auto;
+  }
+}
