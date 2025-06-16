@@ -7,18 +7,25 @@ import ServiceCard from "../components/ServiceCard";
 import "./HomePage.css";
 
 const HomePage = () => {
-
   const reviewsRef = useRef(null);
-  const scrollToReviews = () => {
-    reviewsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   useEffect(() => {
+    const scrollFlag = localStorage.getItem("scrollToReviews");
+
+    if (scrollFlag === "true") {
+      setTimeout(() => {
+        reviewsRef.current?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+
+      localStorage.removeItem("scrollToReviews");
+    }
+
     const handleScroll = () => {
       reviewsRef.current?.scrollIntoView({ behavior: "smooth" });
     };
 
     window.addEventListener("scrollToReviews", handleScroll);
+
     return () => window.removeEventListener("scrollToReviews", handleScroll);
   }, []);
 
@@ -43,17 +50,9 @@ const HomePage = () => {
     },
   ];
 
- 
-
   return (
     <div className="home-page">
       <Hero />
-
-      <div className="section text-center">
-        <button className="btn" onClick={scrollToReviews}>
-          Customer Sayings
-        </button>
-      </div>
 
       {/* About Section */}
       <section className="section about-section">
@@ -68,8 +67,8 @@ const HomePage = () => {
               </p>
               <p>
                 Our team of trained professionals uses advanced equipment and
-                eco-friendly cleaning agents to deliver exceptional results
-                every time.
+                ultraviolet light to eliminate bacteria and deliver exceptional
+                results every time."
               </p>
               <div className="about-features">
                 <div className="feature">

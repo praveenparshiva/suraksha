@@ -1,13 +1,27 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { FaBars, FaTimes, FaPhone} from "react-icons/fa";
+import { useNavigate, useLocation, Link, NavLink } from "react-router-dom";
+import { FaBars, FaTimes, FaPhone } from "react-icons/fa";
 import "./Header.css";
 
-const Header = ({ scrollToReviews }) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleCustomerSayingsClick = () => {
+    localStorage.setItem("scrollToReviews", "true");
+
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.dispatchEvent(new CustomEvent("scrollToReviews"));
+    }
+
+    setIsMenuOpen(false);
   };
 
   return (
@@ -48,17 +62,10 @@ const Header = ({ scrollToReviews }) => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <span
-                className="nav-link"
-                onClick={() => {
-                  window.dispatchEvent(new CustomEvent("scrollToReviews"));
-                  setIsMenuOpen(false);
-                }}
-              >
+              <span className="nav-link" onClick={handleCustomerSayingsClick}>
                 Customer Sayings
               </span>
             </li>
-
             <li className="nav-item">
               <NavLink to="/gallery" onClick={() => setIsMenuOpen(false)}>
                 Gallery
