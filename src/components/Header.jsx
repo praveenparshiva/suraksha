@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FaBars, FaTimes, FaPhone } from "react-icons/fa";
+import { FaBars, FaTimes, FaPhone} from "react-icons/fa";
 import "./Header.css";
 
-const Header = () => {
+const Header = ({ scrollToReviews }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -21,8 +21,8 @@ const Header = () => {
         </div>
 
         <div className="contact-info">
-          <a href="tel:+919713409275" className="phone-link">
-            <FaPhone /> +91 9713409275
+          <a href="tel:+919743409275" className="phone-link">
+            <FaPhone /> +91 9743409275
           </a>
         </div>
 
@@ -47,6 +47,18 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
+            <li className="nav-item">
+              <span
+                className="nav-link"
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("scrollToReviews"));
+                  setIsMenuOpen(false);
+                }}
+              >
+                Customer Sayings
+              </span>
+            </li>
+
             <li className="nav-item">
               <NavLink to="/gallery" onClick={() => setIsMenuOpen(false)}>
                 Gallery

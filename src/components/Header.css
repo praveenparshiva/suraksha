@@ -70,6 +70,9 @@
 .nav-item a.active {
   background: rgba(255, 255, 255, 0.2);
 }
+.nav-link {
+  cursor: pointer;
+}
 
 .menu-toggle {
   display: none;

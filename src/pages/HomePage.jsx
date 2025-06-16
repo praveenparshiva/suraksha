@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaWater, FaTools, FaShieldAlt, FaCheckCircle } from "react-icons/fa";
 import Hero from "../components/Hero";
@@ -6,6 +7,21 @@ import ServiceCard from "../components/ServiceCard";
 import "./HomePage.css";
 
 const HomePage = () => {
+
+  const reviewsRef = useRef(null);
+  const scrollToReviews = () => {
+    reviewsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      reviewsRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    window.addEventListener("scrollToReviews", handleScroll);
+    return () => window.removeEventListener("scrollToReviews", handleScroll);
+  }, []);
+
   const services = [
     {
       icon: <FaWater />,
@@ -33,6 +49,12 @@ const HomePage = () => {
     <div className="home-page">
       <Hero />
 
+      <div className="section text-center">
+        <button className="btn" onClick={scrollToReviews}>
+          Customer Sayings
+        </button>
+      </div>
+
       {/* About Section */}
       <section className="section about-section">
         <div className="container">
@@ -40,7 +62,7 @@ const HomePage = () => {
             <div className="about-text">
               <h2>Welcome to Suraksha Tank & Sump Cleaning Service</h2>
               <p>
-                With over 10 years of experience, we are dedicated to providing
+                With over 15 years of experience, we are dedicated to providing
                 high-quality tank and sump cleaning services to ensure clean and
                 safe water for your family and business.
               </p>
@@ -160,7 +182,7 @@ const HomePage = () => {
       </section>
 
       {/* Elfsight Google Reviews Widget */}
-      <section className="section google-reviews-section">
+      <section className="section google-reviews-section" ref={reviewsRef}>
         <div className="container">
           <div
             className="elfsight-app-d1fb7013-7ccf-4263-b788-7d93f5a1e787"

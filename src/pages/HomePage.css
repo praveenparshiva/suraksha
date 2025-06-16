@@ -102,17 +102,11 @@
 .why-us-item p {
   opacity: 0.9;
 }
-
-/* Testimonials Section */
-.testimonials-section {
-  background-color: var(--accent-color);
+.text-center {
+  text-align: center;
+  margin: 24px 0;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
 
 /* CTA Section */
 .cta-section {

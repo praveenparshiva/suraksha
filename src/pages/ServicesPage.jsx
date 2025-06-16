@@ -21,8 +21,8 @@ const ServicesPage = () => {
       features: [
         "Complete draining of the tank",
         "Removal of sludge and sediment",
-        "Scrubbing of walls and floor",
-        "Disinfection with eco-friendly chemicals",
+        "High pressure water jet cleaning of walls and floor",
+        "Disinfection with ultraviolet rays",
         "Final rinse and refilling",
       ],
     },
@@ -33,13 +33,13 @@ const ServicesPage = () => {
         "Our sump cleaning service ensures that the primary water storage unit of your building is free from contaminants, providing clean water supply throughout your property.",
       features: [
         "Pumping out existing water",
-        "Manual cleaning of sump walls and floor",
+        "High pressure water jet cleaning of sump walls and floor",
         "Removal of debris and sediment",
         "Disinfection and sanitization",
         "Quality check before refilling",
       ],
     },
-   
+
     {
       icon: <FaBuilding />,
       title: "Commercial Tank Cleaning",
@@ -49,8 +49,6 @@ const ServicesPage = () => {
         "Scheduled maintenance programs",
         "Minimal disruption to business operations",
         "Compliance with health regulations",
-        "Documentation and certification",
-        "24/7 emergency services",
       ],
     },
     {
@@ -162,7 +160,7 @@ const ServicesPage = () => {
               <div className="step-number">3</div>
               <h3>Cleaning</h3>
               <p>
-                Our team manually scrubs all surfaces to remove algae, sediment,
+                Our team uses high pressure water jet to remove algae, sediment,
                 and other contaminants using specialized equipment.
               </p>
             </div>
@@ -213,11 +211,11 @@ const ServicesPage = () => {
             </div>
 
             <div className="faq-item">
-              <h3>Are the cleaning agents you use safe?</h3>
+              <h3>Are the methods you use safe?</h3>
               <p>
-                Yes, we only use eco-friendly, food-grade cleaning agents and
-                disinfectants that are safe for drinking water systems and do
-                not leave harmful residues.
+                Yes, we use UV light technology to disinfect, which is
+                completely chemical-free, eco-friendly, and safe for drinking
+                water systems, leaving no harmful residues.
               </p>
             </div>
 
