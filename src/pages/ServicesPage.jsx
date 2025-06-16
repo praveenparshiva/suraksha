@@ -81,6 +81,7 @@ const ServicesPage = () => {
     },
   ];
 
+  
   return (
     <div className="services-page">
       {/* Hero Section */}
@@ -187,7 +188,15 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      
+      {/* Elfsight Google Reviews Widget */}
+      <section className="section google-reviews-section">
+        <div className="container">
+          <div
+            className="elfsight-app-d1fb7013-7ccf-4263-b788-7d93f5a1e787"
+            data-elfsight-app-lazy
+          ></div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="section faq-section">

@@ -130,7 +130,7 @@ const AboutPage = () => {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
-              <h3>10+</h3>
+              <h3>15+</h3>
               <p>Years of Experience</p>
             </div>
 

@@ -48,6 +48,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/gallery" onClick={() => setIsMenuOpen(false)}>
+                Gallery
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/contact" onClick={() => setIsMenuOpen(false)}>
                 Contact
               </NavLink>
