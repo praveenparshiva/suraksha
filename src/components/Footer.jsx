@@ -24,7 +24,7 @@ const Footer = () => {
           <h4>Contact Us</h4>
           <ul>
             <li>
-              <FaPhone /> <a href="tel:+919713409275">+91 9713 409 275</a>
+              <FaPhone /> <a href="tel:+919743409275">+91 9743 409 275</a>
             </li>
             <li>
               <FaEnvelope />{" "}

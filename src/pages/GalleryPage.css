@@ -1,94 +1,60 @@
-.parent {
+.image-grid{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  gap: 8px;
-  margin: 8px;
+  grid-template-columns: repeat(4, 0.4fr);
+  gap: 20px;
+  padding: 0 8px;
+  margin: 10px;
+}
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 0.6fr);
+  gap: 20px;
+  padding: 0 8px;
+  margin: 10px;
 }
 
-.parent > div {
-  overflow: hidden;
-  border-radius: 8px;
+.media-box {
+  border-radius: 16px;
+  padding: 4px;
+  background: linear-gradient(to right, #007cf0, #00dfd8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-img,
-video {
+.media-box img,
+.video-item {
+  border-radius: 12px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  border: 3px solid black;
-  border-radius: 20px;
+  background-color: #fff; /* Optional inner background */
 }
 
-.div1 {
-  grid-column: span 2 / span 2;
-  grid-row: span 3 / span 3;
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
-.div2 {
-  grid-row: span 3 / span 3;
-  grid-column-start: 3;
+.video-item {
+  width: 80%;
+  height: 500px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #000;
+  display: block;
+  margin-left: 60px;
 }
 
-.div3 {
-  grid-column: span 2 / span 2;
-  grid-row: span 3 / span 3;
-  grid-column-start: 4;
-}
-
-.div4 {
-  grid-row: span 3 / span 3;
-  grid-row-start: 4;
-}
-
-.div5 {
-  grid-column: span 2 / span 2;
-  grid-row: span 3 / span 3;
-  grid-row-start: 4;
-}
-
-.div6 {
-  grid-row: span 3 / span 3;
-  grid-column-start: 4;
-  grid-row-start: 4;
-}
-
-.div7 {
-  grid-row: span 3 / span 3;
-  grid-column-start: 5;
-  grid-row-start: 4;
-}
-
-.div8 {
-  grid-column: span 2 / span 2;
-  grid-row: span 3 / span 3;
-  grid-row-start: 7;
-}
-
-.div9 {
-  grid-column: span 2 / span 2;
-  grid-row: span 3 / span 3;
-  grid-column-start: 4;
-  grid-row-start: 7;
-}
-
-.div10 {
-  grid-row: span 3 / span 3;
-  grid-column-start: 3;
-  grid-row-start: 7;
-}
 @media (max-width: 600px) {
-  .parent {
+  .image-grid,
+  .video-grid {
     grid-template-columns: 1fr;
-  }
-
-  .parent > div {
-    grid-column: span 1 !important;
-    grid-row: auto !important;
-  }
-
-  img, video {
-    height: auto;
   }
 }

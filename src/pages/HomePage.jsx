@@ -140,7 +140,7 @@ const HomePage = () => {
               <h3>Safety First</h3>
               <p>
                 We prioritize safety in all our operations, using only certified
-                and eco-friendly cleaning agents.
+                and eco-friendly cleaning methods.
               </p>
             </div>
 
