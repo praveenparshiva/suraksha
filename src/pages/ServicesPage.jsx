@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   FaWater,
   FaTools,
-  FaShieldAlt,
   FaCheck,
   FaBuilding,
   FaHome,
@@ -100,7 +99,7 @@ const ServicesPage = () => {
           <p className="section-subtitle">
             At Suraksha, we provide a wide range of professional cleaning
             services for all types of water storage systems. Our team uses
-            advanced equipment and eco-friendly cleaning agents to ensure the
+            advanced equipment and eco-friendly cleaning device to ensure the
             highest standards of cleanliness and hygiene.
           </p>
 

@@ -46,7 +46,7 @@ const HomePage = () => {
       icon: <FaShieldAlt />,
       title: "Disinfection Services",
       description:
-        "Thorough disinfection using eco-friendly chemicals to eliminate harmful microorganisms.",
+        "Thorough disinfection using UltraViolet light technology to eliminate harmful microorganisms.",
     },
   ];
 

@@ -61,7 +61,7 @@ const ContactPage = () => {
                   </div>
                   <div className="method-details">
                     <h3>Address</h3>
-                    <p>7th Cross, 3rd Main Rd, C-Block, JP Nagar,</p>
+                    <p>84/A, 7th Cross, 3rd Main Rd, C-Block, JP Nagar,</p>
                     <p>Mysuru, Karnataka - 570008</p>
                   </div>
                 </div>
