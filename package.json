@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
@@ -20,5 +23,18 @@
     "@types/react-dom": "^18.2.6",
     "@vitejs/plugin-react": "^4.0.1",
     "vite": "^4.4.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenparshiva/suraksha.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praveenparshiva/suraksha/issues"
+  },
+  "homepage": "https://github.com/praveenparshiva/suraksha#readme",
+  "description": ""
 }

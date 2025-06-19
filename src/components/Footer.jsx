@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <FaMapMarkerAlt /> 3rd Main Rd, C-Block, JP Nagar, Mysuru,
+              <FaMapMarkerAlt />84/A, 3rd Main Rd, C-Block, JP Nagar, Mysuru,
               Karnataka 570008
             </li>
           </ul>

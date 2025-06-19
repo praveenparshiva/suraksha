@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "./ContactForm.css";
-import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     phone: "",
     service: "",
     message: "",
@@ -13,7 +11,6 @@ const ContactForm = () => {
 
   const [formStatus, setFormStatus] = useState({
     submitted: false,
-    error: false,
   });
 
   const handleChange = (e) => {
@@ -24,46 +21,32 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      phone: formData.phone,
-      service: formData.service,
-      message: formData.message,
-      time: new Date().toLocaleString(),
-    };
+    const { name, phone, service, message } = formData;
 
-    emailjs
-      .send(
-        "service_c6ci24r",
-        "template_o1w8xmz",
-        templateParams,
-        "ZKDmgCH6w0BqZrLs2"
-      )
-      .then(() => {
-        setFormStatus({ submitted: true, error: false });
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          service: "",
-          message: "",
-        });
-      })
-      .catch(() => {
-        setFormStatus({ submitted: false, error: true });
-      });
+    const text = `Full Name: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
+
+    const whatsappURL = `https://wa.me/919743409275?text=${text}`;
+
+    window.open(whatsappURL, "_blank"); 
+
+    setFormStatus({ submitted: true });
+    setFormData({
+      name: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
   };
 
   return (
     <div className="contact-form-container">
       {formStatus.submitted ? (
         <div className="form-success">
-          <h3>Thank you for contacting us!</h3>
-          <p>We have received your message and will get back to you shortly.</p>
+          <h3>Thank you!</h3>
+          <p>Your WhatsApp message is ready to send.</p>
           <button
             className="btn"
-            onClick={() => setFormStatus({ submitted: false, error: false })}
+            onClick={() => setFormStatus({ submitted: false })}
           >
             Send Another Message
           </button>
@@ -82,30 +65,16 @@ const ContactForm = () => {
             />
           </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-              />
-            </div>
+          <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
           </div>
 
           <div className="form-group">
@@ -118,15 +87,9 @@ const ContactForm = () => {
               required
             >
               <option value="">Select a service</option>
-              <option value="water-tank-cleaning">Water Tank Cleaning</option>
-              <option value="sump-cleaning">Sump Cleaning</option>
-              <option value="underground-tank-cleaning">
-                Underground Tank Cleaning
-              </option>
-              <option value="overhead-tank-cleaning">
-                Overhead Tank Cleaning
-              </option>
-              <option value="other">Other</option>
+              <option value="Water Tank Cleaning">Water Tank Cleaning</option>
+              <option value="Sump Cleaning">Sump Cleaning</option>
+              <option value="Both">Both</option>
             </select>
           </div>
 
@@ -142,8 +105,13 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
+          <p className="whatsapp-note">
+            After clicking "Send via WhatsApp", you will be redirected to
+            WhatsApp. Please press the send button to confirm your message.
+          </p>
+
           <button type="submit" className="btn form-submit">
-            Send Message
+            Send via WhatsApp
           </button>
         </form>
       )}
