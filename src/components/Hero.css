@@ -1,19 +1,76 @@
 .hero {
   height: 80vh;
   min-height: 500px;
-  background: var(--gradient-secondary);
-  background-position: center;
+  background: var(--gradient-secondary); /* fallback */
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   text-align: center;
   color: white;
-  position: relative;
 }
 
+/* Carousel container */
+.hero-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+/* Each image container */
+.carousel-image {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  transition: all 1s ease-in-out;
+  opacity: 0.6;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Left image - shrunk and to the left */
+.carousel-image.left {
+  width: 25%;
+  height: 80%;
+  transform: scale(0.8) translateX(-35%);
+  z-index: 1;
+}
+
+/* Center image - big and prominent */
+.carousel-image.center {
+  width: 50%;
+  height: 80%;
+  transform: scale(1);
+  z-index: 2;
+  opacity: 1;
+}
+
+/* Right image - shrunk and to the right */
+.carousel-image.right {
+  width: 25%;
+  height: 80%;
+  transform: scale(0.8) translateX(35%);
+  z-index: 1;
+}
+/* Video styling inside carousel */
+.carousel-image video.video-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text content stays on top */
 .hero-content {
   max-width: 800px;
   padding: 0 20px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero h1 {
@@ -42,8 +99,7 @@
   background: var(--gradient-primary);
 }
 
-
-
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     height: 70vh;
@@ -60,5 +116,17 @@
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .carousel-image.center {
+    width: 70%;
+    height: 60%;
+  }
+
+  .carousel-image.left,
+  .carousel-image.right {
+    width: 15%;
+    height: 40%;
+    display: none; /* hide on small screens for simplicity */
   }
 }
