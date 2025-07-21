@@ -85,19 +85,6 @@
   opacity: 0.9;
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
-
-.btn-primary {
-  background: var(--gradient-primary);
-}
-
-.btn-secondary {
-  background: var(--gradient-primary);
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -107,12 +94,9 @@
 
   .hero h1 {
     font-size: 2rem;
+    margin-top: -65%;
   }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
+ 
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
@@ -121,6 +105,7 @@
   .carousel-image.center {
     width: 70%;
     height: 60%;
+    margin-top: 40%;
   }
 
   .carousel-image.left,
