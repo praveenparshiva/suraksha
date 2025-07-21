@@ -204,7 +204,7 @@ const ServicesPage = () => {
               <h3>How long does the cleaning process take?</h3>
               <p>
                 The duration depends on the size and condition of your tank or
-                sump. Typically, a standard residential tank cleaning takes 2-3
+                sump. Typically, a standard residential tank cleaning takes 1-2
                 hours, while larger commercial tanks may take 4-6 hours or more.
               </p>
             </div>
